@@ -1,0 +1,30 @@
+{
+    "Informations de dépôt": [
+        "origin_compte",
+        "numero_lot",
+        "code_partenaire",
+        "nom_partenaire",
+        "numero_gestion",
+        "numero_national",
+        "numero_liasse",
+        "date_depot",
+        "confidentialite"
+    ],
+    "Identité du bilan": [
+        "siren",
+        "denomination_sociale",
+        "date_ouverture",
+        "date_cloture",
+        "duree_exercice",
+        "type_compte"
+    ],
+    "Statut du bilan": [
+        "date_saisie",
+        "statut",
+        "etat_saisie",
+        "motif_rejet",
+        "code_traitement",
+        "commentaires",
+        "historique"
+    ]
+}

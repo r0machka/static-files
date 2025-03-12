@@ -1,0 +1,201 @@
+{
+    "origin_compte": {
+      "type": "string",
+      "enum": ["GU", "IG"],
+      "example": "GU",
+      "description": "Origine des données du compte (ex: INPI, Greffe)",
+      "group": "Identité du bilan",
+      "label": "Origine du compte"
+    },
+    "numero_lot": {
+      "type": "string",
+      "example": "LOT2024-001",
+      "description": "Identifiant unique du lot de bilans",
+      "group": "Informations de dépôt",
+      "label": "Numéro de lot"
+    },
+    "code_partenaire": {
+      "type": "string",
+      "example": "VAL-123",
+      "description": "Code du partenaire (greffe ou chambre des métiers)",
+      "group": "Informations de dépôt",
+      "label": "Code partenaire"
+    },
+    "nom_partenaire": {
+      "type": "string",
+      "example": "Greffe 5",
+      "description": "Nom du partenaire (greffe ou chambre des métiers)",
+      "group": "Informations de dépôt",
+      "label": "Nom partenaire"
+    },
+    "siren": {
+      "type": "string",
+      "pattern": "^[0-9]{9}$",
+      "example": "123456789",
+      "description": "Numéro SIREN de l'entreprise (9 chiffres)",
+      "group": "Identité du bilan",
+      "label": "SIREN"
+    },
+    "numero_gestion": {
+      "type": "string",
+      "example": "GEST-123456",
+      "description": "Numéro unique de gestion de l'entreprise",
+      "group": "Informations de dépôt",
+      "label": "Numéro de gestion"
+    },
+    "numero_national": {
+      "type": "string",
+      "example": "NAT-789012",
+      "description": "Numéro d'identification national",
+      "group": "Informations de dépôt",
+      "label": "Numéro national"
+    },
+    "numero_liasse": {
+      "type": "string",
+      "example": "LIASSE-0001",
+      "description": "Numéro de la liasse comptable",
+      "group": "Informations de dépôt",
+      "label": "Numéro de liasse"
+    },
+    "denomination_sociale": {
+      "type": "string",
+      "example": "ENTREPRISE-1",
+      "description": "Nom de l'entreprise",
+      "group": "Identité du bilan",
+      "label": "Dénomination sociale"
+    },
+    "date_depot": {
+      "type": "string",
+      "format": "date",
+      "example": "2023-01-15",
+      "description": "Date de dépôt du bilan",
+      "group": "Informations de dépôt",
+      "label": "Date de dépôt"
+    },
+    "date_ouverture": {
+      "type": "string",
+      "format": "date",
+      "example": "2022-01-01",
+      "description": "Date d'ouverture de l'exercice comptable",
+      "group": "Identité du bilan",
+      "label": "Date d'ouverture"
+    },
+    "date_cloture": {
+      "type": "string",
+      "format": "date",
+      "example": "2022-12-31",
+      "description": "Date de clôture de l'exercice comptable",
+      "group": "Identité du bilan",
+      "label": "Date de clôture"
+    },
+    "date_saisie": {
+      "type": "string",
+      "format": "date",
+      "example": "2023-01-16",
+      "description": "Date de saisie du bilan",
+      "group": "Informations de dépôt",
+      "label": "Date de saisie"
+    },
+    "confidentialite": {
+      "type": "string",
+      "enum": [
+        "Public",
+        "Confidentiel",
+        "CdRConfidentiel",
+        "VersionSimplifié",
+        "CdREtRapportConfidentiels"
+      ],
+      "description": "Niveau de confidentialité du bilan",
+      "group": "Informations de dépôt",
+      "label": "Confidentialité"
+    },
+    "duree_exercice": {
+      "type": "integer",
+      "example": 12,
+      "description": "Durée de l'exercice comptable en mois",
+      "group": "Identité du bilan",
+      "label": "Durée exercice"
+    },
+    "type_compte": {
+      "type": "string",
+      "enum": [
+        "Complet",
+        "Simplifié",
+        "Consolidé",
+        "Banque",
+        "Assurance",
+        "Agricole",
+        "EIRL"
+      ],
+      "description": "Type de bilan comptable",
+      "group": "Identité du bilan",
+      "label": "Type de compte"
+    },
+    "imprime": {
+      "type": "string",
+      "enum": [
+        "Cerfa",
+        "NonCerfa",
+        "Autre"
+      ],
+      "description": "Imprime de bilan comptable",
+      "group": "Imprime du bilan",
+      "label": "Imprime de compte"
+    },
+    "statut": {
+      "type": "string",
+      "enum": ["Validé", "En attente", "Rejeté"],
+      "description": "Statut du bilan dans le processus de validation",
+      "group": "Statut du bilan",
+      "label": "Statut"
+    },
+    "etat_saisie": {
+      "type": "string",
+      "enum": ["Correcte", "Erreur OCR", "Données manquantes", "Incohérence"],
+      "description": "État de la saisie du bilan",
+      "group": "Statut du bilan",
+      "label": "État de saisie"
+    },
+    "motif_rejet": {
+      "type": "string",
+      "enum": [
+        "Erreur de saisie",
+        "Incohérence des données",
+        "Document endommagé",
+        "OCR défectueux",
+        "Données illisibles",
+        "Non conformité format",
+        "Données manquantes",
+        "Confidentialité erronée",
+        "SIREN/SIRET invalide",
+        "Problème de doublon",
+        "Numéro de gestion inexistant",
+        "Erreur de validation INPI",
+        "Autre"
+      ],
+      "description": "Motif de rejet du bilan",
+      "group": "Statut du bilan",
+      "label": "Motif de rejet"
+    },
+    "code_traitement": {
+      "type": "string",
+      "enum": ["Normal", "Correction requise", "Exceptionnel"],
+      "description": "Indique si le traitement du bilan est standard, nécessite une correction ou est exceptionnel",
+      "group": "Statut du bilan",
+      "label": "Code traitement"
+    },
+    "commentaires": {
+      "type": "string",
+      "example": "Aucun commentaire",
+      "description": "Commentaires éventuels sur le bilan",
+      "group": "Statut du bilan",
+      "label": "Commentaires"
+    },
+    "historique": {
+      "type": "string",
+      "example": "Modifié le 2023-01-20",
+      "description": "Historique des modifications du bilan",
+      "group": "Statut du bilan",
+      "label": "Historique"
+    }
+  }

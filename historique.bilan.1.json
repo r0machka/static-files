@@ -1,0 +1,134 @@
+{
+  "bilan": {
+    "id": "bilan-1-id",
+    "numero_liasse": "K000111111",
+    "siren_siret": "12345678900011",
+    "nom_entreprise": "Société Exemple SARL",
+    "type_compte": "Complet",
+    "origine_compte": "GU",
+    "date_ouverture": "2023-01-01",
+    "date_cloture": "2023-12-31",
+    "date_depot": "2024-03-05T10:15:00+01:00",
+    "date_saisie": "2024-03-05T10:15:00+01:00",
+    "confidentialite": "Public",
+    "statut": "Validé"
+  },
+  "historique": [
+    {
+      "id": "historique-1-id",
+      "date_heure": "2024-03-05T10:15:00+01:00",
+      "date_heure_fin": "2024-03-05T10:20:00+01:00",
+      "utilisateur": "Système INPI",
+      "action": "Réception du dépôt",
+      "details": "Fichier PDF et métadonnées XML reçus via API SFTP."
+    },
+    {
+      "id": "historique-2-id",
+      "date_heure": "2024-03-05T11:30:00+01:00",
+      "date_heure_fin": "2024-03-05T11:45:00+01:00",
+      "utilisateur": "Opérateur Saisie 001",
+      "action": "Saisie des données",
+      "details": "700 champs saisis, conformité vérifiée."
+    },
+    {
+      "id": "historique-3-id",
+      "date_heure": "2024-03-06T08:45:00+01:00",
+      "date_heure_fin": "2024-03-06T09:00:00+01:00",
+      "utilisateur": "Système INPI",
+      "action": "Contrôle automatique",
+      "details": "Aucune anomalie détectée."
+    },
+    {
+      "id": "historique-4-id",
+      "date_heure": "2024-03-06T09:10:00+01:00",
+      "date_heure_fin": "2024-03-06T09:20:00+01:00",
+      "utilisateur": "Validateur 002",
+      "action": "Validation initiale",
+      "details": "Compte approuvé, transmission pour revue finale."
+    },
+    {
+      "id": "historique-5-id",
+      "date_heure": "2024-03-07T14:20:00+01:00",
+      "date_heure_fin": "2024-03-07T14:30:00+01:00",
+      "utilisateur": "Superviseur 003",
+      "action": "Vérification qualité",
+      "details": "Erreur détectée : incohérence entre total bilan actif et passif."
+    },
+    {
+      "id": "historique-6-id",
+      "date_heure": "2024-03-07T16:05:00+01:00",
+      "date_heure_fin": "2024-03-07T16:15:00+01:00",
+      "utilisateur": "Opérateur Saisie 004",
+      "action": "Correction des erreurs",
+      "details": "Correction effectuée sur le montant des provisions.",
+      "corrections": {
+        "metadonnees": [
+          {
+            "id": "correction-1-id",
+            "date_heure": "2024-03-07T16:10:00+01:00",
+            "date_heure_fin": "2024-03-07T16:12:00+01:00",
+            "utilisateur": "Opérateur Saisie 004",
+            "champ": "Compte",
+            "valeur_avant": "12344",
+            "valeur_apres": "12345"
+          }
+        ],
+        "donnees_comptables": [
+          {
+            "id": "correction-2-id",
+            "date_heure": "2024-03-07T16:10:00+01:00",
+            "date_heure_fin": "2024-03-07T16:12:00+01:00",
+            "utilisateur": "Opérateur Saisie 004",
+            "champ": "Provisions",
+            "poste_cerfa": "CX",
+            "valeur_avant": "10,000",
+            "valeur_apres": "12,000"
+          }
+        ]
+      }
+    },
+    {
+      "id": "historique-7-id",
+      "date_heure": "2024-03-08T08:45:00+01:00",
+      "date_heure_fin": "2024-03-08T09:00:00+01:00",
+      "utilisateur": "Système INPI",
+      "action": "Contrôle automatique",
+      "details": "Aucune anomalie détectée."
+    },
+    {
+      "id": "historique-8-id",
+      "date_heure": "2024-03-08T09:30:00+01:00",
+      "date_heure_fin": "2024-03-08T09:45:00+01:00",
+      "utilisateur": "Validateur 005",
+      "action": "Validation finale",
+      "details": "Compte validé et prêt pour export."
+    },
+    {
+      "id": "historique-9-id",
+      "date_heure": "2024-03-08T11:00:00+01:00",
+      "date_heure_fin": "2024-03-08T11:15:00+01:00",
+      "utilisateur": "Système INPI",
+      "action": "Archivage et export",
+      "details": "Fichier transmis aux bases de diffusion et archivage interne."
+    }
+  ],
+  "anomalies_detectees": [
+    {
+      "code": "001",
+      "type": "Erreur",
+      "description": "Bilan Actif ≠ Passif",
+      "statut": "Corrigé"
+    },
+    {
+      "code": "002",
+      "type": "Alerte",
+      "description": "Dépôt tardif",
+      "statut": "Accepté avec justification"
+    }
+  ],
+  "documents_associes": {
+    "pdf_bilan": "InovaticServices2021.pdf",
+    "metadonnees": "GU_CA_123123123_20231231_K123456789.xml",
+    "hash_md5": "f7e8d3b2c9a3..."
+  }
+}

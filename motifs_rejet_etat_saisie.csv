@@ -1,0 +1,12 @@
+Motif de rejet,État de saisie attendu,Statut,Code de traitement
+OCR défectueux,Erreur OCR,Rejeté,Correction requise
+Données illisibles,Erreur OCR,Rejeté,Correction requise
+Incohérence des données,Incohérence,Rejeté,Correction requise
+Non conformité format,Incohérence,Rejeté,Correction requise
+Données manquantes,Données manquantes,Rejeté,Correction requise
+Numéro de gestion inexistant,Données manquantes,Rejeté,Correction requise
+SIREN/SIRET invalide,Incohérence,Rejeté,Correction requise
+Problème de doublon,Incohérence,Rejeté,Correction requise
+Erreur de validation INPI,Incohérence,Rejeté,Correction requise
+,Correct,Validé,Normal
+,,En attente,
